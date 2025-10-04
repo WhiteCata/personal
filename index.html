@@ -1,65 +1,143 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中国康复医学会证书查询认证系统</title>
+    <meta charset="utf-8">
+    <title>证书查询结果 | 中国康复医学会</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+        :root {
+            --blue: #0066cc;
+            --grey: #666;
+            --bg: #f2f4f7;
+            --card: #ffffff;
+        }
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        body {
+            background: var(--bg);
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        h1 {
-            color: #333;
+        header {
+            background: var(--card);
             text-align: center;
+            padding: 4vw 4vw 3vw;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
         }
-        .certificate-info {
-            margin-bottom: 20px;
+        header h1 {
+            font-size: clamp(18px, 5vw, 24px);
+            font-weight: 600;
+            color: #111;
         }
-        .certificate-info p {
-            margin: 5px 0;
-            color: #555;
+        main {
+            flex: 1;
+            padding: 4vw;
         }
-        .link {
-            color: #1a73e8;
+        .card {
+            background: var(--card);
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+            padding: 5vw 6vw;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 3vw 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .row:last-child {
+            border-bottom: none;
+        }
+        .label {
+            flex: 0 0 28%;
+            font-size: clamp(12px, 3.4vw, 15px);
+            color: var(--grey);
+        }
+        .value {
+            flex: 1;
+            font-size: clamp(14px, 3.8vw, 17px);
+            text-align: right;
+            word-break: break-word;
+        }
+        footer {
+            background: var(--card);
+            padding: 3vw 4vw 4vw;
+            box-shadow: 0 -1px 2px rgba(0, 0, 0, .05);
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background: var(--blue);
+            color: #fff;
+            text-align: center;
+            padding: 3.5vw 0;
+            border-radius: 6px;
+            font-size: clamp(15px, 4.2vw, 18px);
             text-decoration: none;
+            letter-spacing: 1px;
         }
-        .link:hover {
-            text-decoration: underline;
+        .btn:active {
+            background: #0052a3;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>中国康复医学会证书查询认证系统</h1>
-        <div class="certificate-info">
-            <p><strong>姓名：</strong>高洋</p>
-            <p><strong>证书编号：</strong>CARMKP2025018120</p>
-            <p><strong>比赛名称：</strong>首届中国康复医学会科普大赛</p>
-            <p><strong>发证日期：</strong>2025年9月17日</p>
-            <p><strong>作者单位：</strong>哈尔滨医科大学附属第一医院</p>
-            <p><strong>完成人：</strong>高洋、鲁光熙、卢东赫</p>
-            <p><strong>作品名称：</strong>血糖总失控？可能是你的体重在“造反”！</p>
-            <p><strong>奖项：</strong>职业组视频类三等奖</p>
-        </div>
-        <div class="links">
-            <p>相关链接：</p>
-            <ul>
-                <li><a href="https://www.sciconf.cn" class="link" target="_blank">中国康复医学会官网</a></li>
-                <li><a href="https://www.hrbmu.edu.cn" class="link" target="_blank">哈尔滨医科大学附属第一医院</a></li>
-                <li><a href="https://www.medicon.com.cn" class="link" target="_blank">美迪康会务通</a></li>
-            </ul>
-        </div>
-    </div>
+    </header>
+
+    <main>
+        <section class="card">
+            <div class="row">
+                <span class="label">姓名</span>
+                <span class="value">高洋</span>
+            </div>
+             <div class="row">
+                <span class="label">证书</span>
+                <span class="value"><a class="btn" href="#">查看</a></span>
+            </div>
+            <div class="row">
+                <span class="label">证书编号</span>
+                <span class="value">CARMKP2025018120</span>
+            </div>
+            <div class="row">
+                <span class="label">比赛名称</span>
+                <span class="value">首届中国康复医学会科普大赛</span>
+            </div>
+            <div class="row">
+                <span class="label">发证日期</span>
+                <span class="value">2025 年 9 月 17 日</span>
+            </div>
+            <div class="row">
+                <span class="label">作者单位</span>
+                <span class="value">哈尔滨医科大学附属第一医院</span>
+            </div>
+            <div class="row">
+                <span class="label">完成人</span>
+                <span class="value">高洋、鲁光熙、卢东赫</span>
+            </div>
+            <div class="row">
+                <span class="label">作品名称</span>
+                <span class="value">血糖总失控？可能是你的体重在“造反”！</span>
+            </div>
+            <div class="row">
+                <span class="label">奖项(几等奖)</span>
+                <span class="value">职业组视频类三等奖</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- 把 # 换成真实 pdf/图片地址即可 -->
+       <p>技术支持： 400-008-5413</p>
+       <p>美迪会务通管理入口</p>
+    </footer>
 </body>
 </html>
