@@ -35,6 +35,32 @@
             font-weight: 600;
             color: #111;
         }
+        /* 整体容器：上下居中、可点击区域 */
+        .avatar-box {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;              /* 头像与名字间距 */
+            cursor: pointer;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+            user-select: none;
+        }
+
+        /* 头像：30×30 圆形 */
+        .avatar-img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;     /* 保证图片不变形 */
+            background: #f2f4f7;   /* 默认占位背景 */
+        }
+
+        /* 名字：12px 灰色 */
+        .avatar-name {
+            font-size: 12px;
+            color: #666;
+            line-height: 1;
+        }
         main {
             flex: 1;
             padding: 4vw;
@@ -109,9 +135,9 @@
 
     <main>
         <section class="card">
-            <div class="row">
-                <span class="label">姓名</span>
-                <span class="value">高洋</span>
+            <div class="avatar-box">
+                <img class="avatar-img" src="https://bpic.51yuansu.com/pic3/cover/01/69/80/595f67c2aff1e_610.jpg?x-oss-process=image/resize,h_360,m_lfit/sharpen,100" alt="头像">
+                <span class="avatar-name">高洋</span>
             </div>
              <div class="row">
                 <span class="label">证书</span>
